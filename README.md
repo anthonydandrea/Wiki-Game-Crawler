@@ -2,6 +2,8 @@
 
 Play an automated Wiki Game!
 
+https://en.wikipedia.org/wiki/Wikipedia:Wiki_Game
+
 ## To Run
 ```
 python3 main.py [--start WIKI_PAGE_URL] [--end WIKI_PAGE_URL] [--limit MAX_PAGE_JUMPS]
