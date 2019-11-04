@@ -3,13 +3,12 @@ import re
 from collections import deque
 
 BASE_URL = 'https://en.wikipedia.org/wiki/'
-RANDOM_URL = 'https://en.wikipedia.org/wiki/Special:Random'\
+RANDOM_URL = 'https://en.wikipedia.org/wiki/Special:Random'
 
 def end_game(start,end,path):
     print('{} -> {} in {} hops'.format(start,end,len(path)))
     print(' --> '.join(path),'-->',end)
     exit(0)
-
 
 def play(start,end,limit):
     Q = deque()
@@ -39,7 +38,7 @@ def play(start,end,limit):
         Q.extend(new_urls)
         
         if len(path) > limit:
-            print('\n\nPath not found within {} jumps :('.format(limit))
+            print('\n\nPath not found within {} jumps :(\n'.format(limit))
             exit()
     
 
