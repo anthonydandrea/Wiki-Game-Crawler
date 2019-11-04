@@ -11,7 +11,7 @@ def end_game(start,end,path):
     exit(0)
 
 
-def play(start,end):
+def play(start,end,limit):
     Q = deque()
     checked = set()
     print('Play!')
@@ -21,7 +21,7 @@ def play(start,end):
 
     print('{} -> {}'.format(start,end))
     Q.append((start,[]))
-    print(Q)
+
     while len(Q) > 0:
         title, path = Q.popleft()
         print('Searching page: {}'.format(title))
@@ -38,8 +38,8 @@ def play(start,end):
 
         Q.extend(new_urls)
         
-        if len(path) > 3:
-            print('\n\nNot found in 3 jumps, dang')
+        if len(path) > limit:
+            print('\n\nPath not found within {} jumps :('.format(limit))
             exit()
     
 
