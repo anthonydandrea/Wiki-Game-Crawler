@@ -55,5 +55,5 @@ def get_subject(url):
 def get_random_page():
     page = requests.get(RANDOM_URL).url
     # print(page)
-    return requests.get(RANDOM_URL).url
+    return page
 
